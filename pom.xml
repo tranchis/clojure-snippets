@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.tranchis</groupId>
 	<artifactId>clojure-snippets</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>clojure</packaging>
 	<repositories>
 		<repository>
@@ -11,38 +11,8 @@
 			<url>http://clojars.org/repo</url>
 		</repository>
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>onejar-maven-plugin.googlecode.com</id>
-			<url>http://onejar-maven-plugin.googlecode.com/svn/mavenrepo</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>onejar-maven-plugin-itm-patch</id>
-			<url>http://www.itm.uni-luebeck.de/projects/maven/releases/</url>
-		</pluginRepository>
-	</pluginRepositories>
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.dstovall</groupId>
-				<artifactId>onejar-maven-plugin-rc8fix</artifactId>
-				<version>1.4.6</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<configuration>
-							<mainClass>eu.superhub.wp3.autocomplete.server.ServerInstance</mainClass>
-							<onejarVersion>0.98-RC2</onejarVersion>
-							<attachToBuild>true</attachToBuild>
-							<classifier>onejar</classifier>
-							<urlFactory>com.simontuffs.onejar.JarClassLoader$OneJarURLFactory</urlFactory>
-						</configuration>
-						<goals>
-							<goal>one-jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
@@ -146,7 +116,7 @@
 	</dependencies>
 	<distributionManagement>
 		<repository>
-			<id>bintray-tranchis</id>
+			<id>bintray-tranchis-clojure-snippets-clojure-snippets</id>
 			<name>tranchis-clojure-snippets-clojure-snippets</name>
 			<url>https://api.bintray.com/maven/tranchis/clojure-snippets/clojure-snippets</url>
 		</repository>
